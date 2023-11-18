@@ -1,0 +1,10 @@
+---
+# https://docs.cpanel.net/knowledge-base/security/how-to-use-cpanel-api-tokens/#run-api-functions-with-the-token
+# https://api.docs.cpanel.net/cpanel/introduction/
+
+cpanel_site: example.com
+cpanel_user:
+cpanel_token:
+
+cpanel_module: DNS
+cpanel_function: parse_zone?zone=example.com

@@ -1,0 +1,13 @@
+---
+
+- name: Calls to cPanel API
+  uri:
+    url: https://{{ cpanel_site }}:2083/execute/{{ cpanel_module }}/{{ cpanel_function }}
+    method: GET
+    headers:
+      Authorization: "cpanel {{ cpanel_user }}:{{ cpanel_token }}"
+    return_content: yes
+  register: _response
+
+- debug:
+    var: _response.content
